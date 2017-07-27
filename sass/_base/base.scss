@@ -1,0 +1,55 @@
+html, body{
+	font-family: Ubuntu, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	min-height: 100%;
+  width: 100%;
+  line-height: 24px;
+  color: $maintext;
+}
+
+section{
+  min-height: 650px;
+}
+
+h1, h2, h3, h4, h5{
+  margin: 0;
+  line-height: inherit;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+  }
+} 
+
+.container{
+  max-width: 940px;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+.responsive-img{
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button{
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1em;
+  padding: 13px 16px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $maintext;
+}
+
+
+
+
+

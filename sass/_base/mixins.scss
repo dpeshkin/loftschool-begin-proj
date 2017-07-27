@@ -1,0 +1,22 @@
+
+// Подключение шрифтов @include font-face("Fontname", ("../fontlocation/fontname.fontex"), fonttype, fontweight);
+@mixin font-face($name, $font-files, $format: false, $weight: false, $style: false) {
+  @font-face {
+    font-family: quote($name);
+    src: url($font-files) format(quote($format));
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $style {
+      font-style: $style;
+    }
+  }
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

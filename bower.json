@@ -1,0 +1,23 @@
+{
+  "name": "burgershop",
+  "description": "loftblog diplom project",
+  "main": "index.js",
+  "authors": [
+    "Dmitry Peshkin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "loftschool"
+  ],
+  "homepage": "https://github.com/ekb196/burgershop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^7.0.0"
+  }
+}

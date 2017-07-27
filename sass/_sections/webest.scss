@@ -1,0 +1,36 @@
+.about{
+	background-image: url(../img/webest/background.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 70px 0px 150px 0px;
+	color: #2f3234;
+}
+
+.section-header{
+	font-family: Gagalin, Arial, sans-serif;
+	font-size: $headertext;
+	text-align: center;
+	line-height: 64px;
+	margin-bottom: 90px
+}
+
+.advantages{
+	width: 33.33%;
+	text-align: center;
+	float: left;
+	padding: 0px 10px;
+	
+	&__icon{
+		margin-bottom: 34px;
+	}
+
+	&__header{
+		font-family: Lifehack, serif;
+		font-size: 24px;
+		margin-bottom: 26px;
+	}
+
+	&__text{
+		font-weight: 300;
+	}
+}

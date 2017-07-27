@@ -33,6 +33,14 @@
   src: url("../fonts/Ubuntu-Bold") format("woff");
   font-weight: 700; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
 html, body {
   font-family: Ubuntu, sans-serif;
   font-size: 14px;
@@ -56,7 +64,7 @@ ul {
     list-style: none; }
 
 .container {
-  max-width: 940px;
+  max-width: 960px;
   margin: 0 auto; }
 
 .responsive-img {
@@ -78,11 +86,13 @@ ul {
 .topline {
   height: 90px; }
   .topline__right {
-    float: right; }
+    float: right;
+    padding: 0px 10px; }
 
 .logo {
   float: left;
-  line-height: 90px; }
+  line-height: 90px;
+  padding: 0px 10px; }
   .logo__img {
     display: inline-block;
     max-height: 90px;
@@ -126,13 +136,10 @@ ul {
   background-position: center; }
   .header-left, .header-right {
     float: left;
-    width: 50%; }
+    width: 50%;
+    padding: 0px 10px; }
   .header-left {
     text-align: center; }
-  .header-right {
-    padding-left: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
   .header__subtitle {
     margin-top: 115px;
     font-family: Gagalin;
@@ -172,7 +179,9 @@ ul {
     padding: 5px;
     width: 7px;
     height: 7px;
-    margin: 0 auto 5px auto; }
+    margin: 0 auto 5px auto;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
     .side-nav__item a {
       display: block;
       background-color: #fff;
@@ -181,3 +190,31 @@ ul {
       border-radius: 50%; }
   .side-nav__item--active {
     border: solid 1px #fff; }
+
+.about {
+  background-image: url(../img/webest/background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0px 150px 0px;
+  color: #2f3234; }
+
+.section-header {
+  font-family: Gagalin, Arial, sans-serif;
+  font-size: 72px;
+  text-align: center;
+  line-height: 64px;
+  margin-bottom: 90px; }
+
+.advantages {
+  width: 33.33%;
+  text-align: center;
+  float: left;
+  padding: 0px 10px; }
+  .advantages__icon {
+    margin-bottom: 34px; }
+  .advantages__header {
+    font-family: Lifehack, serif;
+    font-size: 24px;
+    margin-bottom: 26px; }
+  .advantages__text {
+    font-weight: 300; }

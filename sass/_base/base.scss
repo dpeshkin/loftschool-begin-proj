@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+img {
+  box-sizing: content-box;
+}
+
 html, body{
 	font-family: Ubuntu, sans-serif;
 	font-size: 14px;
@@ -26,7 +33,7 @@ ul{
 } 
 
 .container{
-  max-width: 940px;
+  max-width: 960px;
   margin: 0 auto;
   @extend %clearfix;
 }

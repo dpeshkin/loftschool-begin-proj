@@ -211,10 +211,13 @@ ul {
   float: left;
   padding: 0px 10px; }
   .advantages__icon {
-    margin-bottom: 34px; }
+    display: inline-block;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100px; }
   .advantages__header {
     font-family: Lifehack, serif;
     font-size: 24px;
-    margin-bottom: 26px; }
+    margin-bottom: 12px; }
   .advantages__text {
     font-weight: 300; }

@@ -21,13 +21,16 @@
 	padding: 0px 10px;
 	
 	&__icon{
-		margin-bottom: 34px;
+		display: inline-block;
+		margin-bottom: 20px;
+		height: 100px;
+		width: 100px;
 	}
 
 	&__header{
 		font-family: Lifehack, serif;
 		font-size: 24px;
-		margin-bottom: 26px;
+		margin-bottom: 12px;
 	}
 
 	&__text{

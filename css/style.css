@@ -172,8 +172,7 @@ ul {
   position: fixed;
   top: 90px;
   right: 45px;
-  z-index: 999;
-  width: 25px; }
+  z-index: 999; }
   .side-nav__item {
     border-radius: 50%;
     padding: 5px;
@@ -221,3 +220,37 @@ ul {
     margin-bottom: 12px; }
   .advantages__text {
     font-weight: 300; }
+
+.review {
+  width: 25%;
+  height: 29vw;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  position: relative;
+  overflow: hidden; }
+  .review:hover .review-caption {
+    bottom: 0; }
+  .review-caption {
+    height: 100%;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+  .review__title {
+    font-family: Gagalin, serif;
+    font-size: 14px;
+    line-height: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+  .review__text {
+    font-weight: 300;
+    margin-bottom: 20px; }
+  .review__button {
+    background-color: #2f3234; }
+    .review__button:hover {
+      background-color: #1f2122; }

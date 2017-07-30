@@ -1,7 +1,3 @@
-
-.reviews{
-}
-
 .review {
 	width: 25%;
 	height: 29vw;
@@ -13,12 +9,12 @@
 	overflow: hidden;
 
 	&:hover{
-		.review-caption{
+		.review__caption{
 			bottom: 0;
 		}
 	}
 
-	&-caption{
+	&__caption{
 		height: 100%;
 		padding: 50px 20px;
 		background-color: rgba(0, 0, 0, 0.5);
@@ -30,7 +26,7 @@
 	}
 
 	&__title{
-		font-family: Gagalin, serif;
+		font-family: $headerfont;
 		font-size: 14px;
 		line-height: 2em;
 		margin-bottom: 20px;

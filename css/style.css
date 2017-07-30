@@ -87,22 +87,31 @@ ul {
   border-radius: 5px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  vertical-align: middle; }
 
 .topline {
   height: 90px; }
-  .topline__right {
-    float: right;
-    padding: 0px 10px; }
 
-.logo {
+.topline__logo {
   float: left;
   line-height: 90px;
   padding: 0px 10px; }
-  .logo__img {
+  .topline__logo-img {
     display: inline-block;
     max-height: 90px;
     vertical-align: middle; }
+
+.topline__right {
+  float: right; }
+
+.topline__nav {
+  padding: 0px 10px; }
+
+.topline__button {
+  background-color: #e45028; }
+  .topline__button:hover {
+    background-color: #c1401e; }
 
 .nav {
   display: inline-block; }
@@ -129,32 +138,28 @@ ul {
       font-size: 13px;
       font-family: Ubuntu, Arial, Sans-serif;
       font-weight: 500;
-      color: #fff; }
-
-.button--order {
-  background-color: #e45028; }
-  .button--order:hover {
-    background-color: #c1401e; }
+      color: #fff;
+      vertical-align: middle; }
 
 .header {
   background-image: url(../img/header/header-bg.jpg);
   background-size: cover;
   background-position: center; }
-  .header-left, .header-right {
+  .header__left, .header__right {
     float: left;
     width: 50%;
     padding: 0px 10px; }
-  .header-left {
+  .header__left {
     text-align: center; }
-  .header__subtitle {
+  .header__title {
     margin-top: 115px;
-    font-family: Gagalin;
+    font-family: Gagalin, serif;
     font-size: 72px;
     color: #f9b43b;
     line-height: 85px; }
-  .header__title {
+  .header__subtitle {
     margin-top: 20px;
-    font-family: Lifehack;
+    font-family: Lifehack, serif;
     font-size: 65px;
     line-height: 60px; }
 
@@ -203,8 +208,8 @@ ul {
   padding: 70px 0px 150px 0px;
   color: #2f3234; }
 
-.section-header {
-  font-family: Gagalin, Arial, sans-serif;
+.about__header {
+  font-family: Gagalin, serif;
   font-size: 72px;
   text-align: center;
   line-height: 64px;
@@ -237,9 +242,9 @@ ul {
           filter: grayscale(100%);
   position: relative;
   overflow: hidden; }
-  .review:hover .review-caption {
+  .review:hover .review__caption {
     bottom: 0; }
-  .review-caption {
+  .review__caption {
     height: 100%;
     padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.5);

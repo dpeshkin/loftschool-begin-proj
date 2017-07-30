@@ -6,8 +6,8 @@
 	color: #2f3234;
 }
 
-.section-header{
-	font-family: Gagalin, Arial, sans-serif;
+.about__header{
+	font-family: $headerfont;
 	font-size: $headertext;
 	text-align: center;
 	line-height: 64px;
@@ -28,7 +28,7 @@
 	}
 
 	&__header{
-		font-family: Lifehack, serif;
+		font-family: $subheaderfont;
 		font-size: 24px;
 		margin-bottom: 12px;
 	}

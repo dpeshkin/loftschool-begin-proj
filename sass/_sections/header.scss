@@ -1,23 +1,33 @@
 // МЕНЮ
 .topline{
 	height: 90px;
-	
-	&__right{
-		float:right;
-		padding: 0px 10px;
-	}
 }
 
-.logo{
+.topline__logo{
   float: left;
   line-height: 90px;
   padding: 0px 10px;
 
-  &__img{
+  &-img{
     display: inline-block;
     max-height: 90px;
     vertical-align: middle;
   };
+}
+
+.topline__right{
+	float: right;
+}
+
+.topline__nav{
+	padding: 0px 10px;
+}
+
+.topline__button{
+	background-color: #e45028;
+	&:hover{
+		background-color: #c1401e
+	}
 }
 
 .nav{
@@ -53,17 +63,12 @@
 			font-family: Ubuntu, Arial, Sans-serif;
 			font-weight: 500;
 			color: $maintext;
+			vertical-align: middle;
 		}
 	}
 }
 
-.button--order{
-	background-color: #e45028;
 
-	&:hover{
-		background-color: #c1401e
-	}
-}
 
 // ОСНОВНОЙ КОНТЕНТ
 
@@ -72,29 +77,29 @@
 	background-size: cover;
 	background-position: center;
 
-	&-left, &-right{
+	&__left, &__right{
 		float: left;
 		width: 50%;
 		padding: 0px 10px;
 	}
 
-	&-left{
+	&__left{
 		text-align: center;
 	}
-	&-right{
+	&__right{
 	}
 
-	&__subtitle{
+	&__title{
 		margin-top: 115px;
-		font-family: Gagalin;
+		font-family: $headerfont;
 		font-size: $headertext;
 		color: $yellowtext;
 		line-height: 85px;
 	}
 
-	&__title{
+	&__subtitle{
 		margin-top: 20px;
-		font-family: Lifehack;
+		font-family: $subheaderfont;
 		font-size: 65px;
 		line-height: 60px;
 	}

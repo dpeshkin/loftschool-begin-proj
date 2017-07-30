@@ -5,33 +5,39 @@
 
 @font-face {
   font-family: "Gagalin";
-  src: url("../fonts/Gagalin-Regular") format("woff");
-  font-weight: 500; }
+  src: url("../fonts/gagalin-regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
 
 @font-face {
   font-family: "Lifehack";
-  src: url("../fonts/Lifehack-Medium") format("woff");
-  font-weight: 500; }
+  src: url("../fonts/lifehack_medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Light") format("woff");
-  font-weight: 300; }
+  src: url("../fonts/ubuntu-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Medium") format("woff");
-  font-weight: 500; }
+  src: url("../fonts/ubuntu-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu") format("woff");
-  font-weight: 600; }
+  src: url("../fonts/ubuntu-regular.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Bold") format("woff");
-  font-weight: 700; }
+  src: url("../fonts/ubuntu-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
 
 * {
   -webkit-box-sizing: border-box;

@@ -1,6 +1,6 @@
 
 // Подключение шрифтов @include font-face("Fontname", ("../fontlocation/fontname.fontex"), fonttype, fontweight);
-@mixin font-face($name, $font-files, $format: false, $weight: false, $style: false) {
+@mixin font-face($name, $font-files, $format: false, $weight: false, $style: normal) {
   @font-face {
     font-family: quote($name);
     src: url($font-files) format(quote($format));
@@ -11,6 +11,13 @@
       font-style: $style;
     }
   }
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
 }
 
 %clearfix {

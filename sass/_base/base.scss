@@ -30,7 +30,11 @@ ul{
   li{
     list-style: none;
   }
-} 
+}
+
+.wrapper{
+  overflow: hidden;
+}
 
 .container{
   max-width: 960px;
@@ -56,6 +60,9 @@ ul{
   color: $maintext;
   vertical-align: middle;
 }
+
+
+
 
 
 

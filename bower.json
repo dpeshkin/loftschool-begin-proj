@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "normalize.css#^7.0.0"
+    "normalize-css": "normalize.css#^7.0.0",
+    "svg4everybody": "^2.1.9"
   }
 }

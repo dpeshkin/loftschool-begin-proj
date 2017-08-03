@@ -69,6 +69,9 @@ ul {
   ul li {
     list-style: none; }
 
+.wrapper {
+  overflow: hidden; }
+
 .container {
   max-width: 960px;
   margin: 0 auto; }
@@ -89,6 +92,24 @@ ul {
   text-decoration: none;
   color: #fff;
   vertical-align: middle; }
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  fill: currentColor; }
+
+.icon_scroll {
+  fill: #fff; }
+
+.icon_meat {
+  fill: #e25028; }
+
+.icon_hand {
+  fill: #f8b43a; }
+
+.icon_natural {
+  fill: #8ac03e; }
 
 .topline {
   height: 90px; }
@@ -168,17 +189,6 @@ ul {
   text-align: center;
   padding: 85px 0px 40px 0px; }
 
-.scroll-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: solid #fff 2px;
-  border-radius: 0px 0px 5px 0px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-top-color: transparent;
-  border-left-color: transparent; }
-
 .side-nav {
   position: fixed;
   top: 90px;
@@ -221,7 +231,6 @@ ul {
   float: left;
   padding: 0px 10px; }
   .advantages__icon {
-    display: inline-block;
     margin-bottom: 20px;
     height: 100px;
     width: 100px; }

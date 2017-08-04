@@ -57,7 +57,8 @@ html, body {
   color: #fff; }
 
 section {
-  min-height: 650px; }
+  min-height: 650px;
+  position: relative; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -92,6 +93,12 @@ ul {
   text-decoration: none;
   color: #fff;
   vertical-align: middle; }
+
+.section__title {
+  font-family: Gagalin, serif;
+  font-size: 72px;
+  color: #f9b43b;
+  line-height: 64px; }
 
 .icon {
   display: inline-block;
@@ -174,9 +181,6 @@ ul {
     text-align: center; }
   .header__title {
     margin-top: 115px;
-    font-family: Gagalin, serif;
-    font-size: 72px;
-    color: #f9b43b;
     line-height: 85px; }
   .header__subtitle {
     margin-top: 20px;
@@ -240,6 +244,96 @@ ul {
     margin-bottom: 12px; }
   .advantages__text {
     font-weight: 300; }
+
+.burgers {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(#eb8e38), to(#f9b43b));
+  background: linear-gradient(#f9b43b, #eb8e38, #f9b43b); }
+
+.team {
+  background: url("../img/team/team-bg.jpg") center;
+  background-size: cover; }
+
+.team__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 49%;
+  background-color: rgba(47, 50, 52, 0.93);
+  padding: 90px 80px; }
+
+.team__title {
+  margin-bottom: 90px; }
+
+.team-member {
+  margin-bottom: 30px; }
+  .team-member_active .team-member__card {
+    height: 100%; }
+  .team-member_active .team-member__name {
+    color: #f9b43b; }
+    .team-member_active .team-member__name:before {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+
+.team-member__name {
+  font-family: Gagalin, serif;
+  line-height: 2em;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .team-member__name:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: solid #f9b43b 5px;
+    border-left: solid transparent 5px;
+    border-right: solid transparent 5px;
+    margin-right: 10px; }
+
+.team-member__card {
+  height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px; }
+
+.team-member__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 16px;
+  font-size: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.team-member__desc {
+  width: 60%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.team-member__position {
+  font-weight: 700;
+  margin-bottom: 10px; }
+
+.team-member__text {
+  font-weight: 300; }
+
+.menu {
+  background: url("../img/menu/menu-bg.jpg") center;
+  background-size: cover; }
 
 .review {
   width: 25%;

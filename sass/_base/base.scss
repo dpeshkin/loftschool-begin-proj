@@ -17,6 +17,7 @@ html, body{
 
 section{
   min-height: 650px;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5{
@@ -59,6 +60,13 @@ ul{
   text-decoration: none;
   color: $maintext;
   vertical-align: middle;
+}
+
+.section__title{
+  font-family: $headerfont;
+  font-size: $headertext;
+  color: $yellowtext;
+  line-height: 64px;
 }
 
 

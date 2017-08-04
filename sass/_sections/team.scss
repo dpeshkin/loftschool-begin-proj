@@ -1,0 +1,90 @@
+.team{
+    background: url("../img/team/team-bg.jpg") center;
+    background-size: cover;
+}
+
+.team__wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 49%;
+    background-color: rgba(#2f3234,0.93);
+    padding: 90px 80px;
+}
+
+.team__title{
+    margin-bottom: 90px;
+}
+
+.team-members{        
+}
+
+.team-member{
+    margin-bottom: 30px;
+
+    &_active{
+        .team-member__card{
+            height: 100%;
+        }
+        .team-member__name{
+            color: $yellowtext;
+            &:before{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.team-member__name{
+    font-family: $headerfont;
+    line-height: 2em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: solid $yellowtext 5px;
+        border-left: solid transparent 5px;
+        border-right: solid transparent 5px;
+        margin-right: 10px;
+    }
+}
+
+.team-member__card{
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.team-member__photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0 16px;
+    font-size: 0;
+    align-items: center;
+    display: flex;
+}
+
+.team-member__desc{
+    width:60%;
+    flex-shrink: 0;
+}
+
+.team-member__position{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.team-member__text{
+    font-weight: 300;
+}
+

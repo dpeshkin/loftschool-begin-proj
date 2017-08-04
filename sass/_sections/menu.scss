@@ -1,4 +1,74 @@
 .menu{
     background: url("../img/menu/menu-bg.jpg") center;
     background-size: cover;
+    padding-top: 110px;
 }
+
+.menu__title{
+    color: #fff;
+}
+
+.menu__wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-list{
+    display: flex;
+    height: 100%;
+}
+
+.menu-list__item{
+    display: flex;
+}
+
+.menu-list__type{
+    width: 80px;
+    position: relative;
+    &_bg-meat{
+        background: url("../img/menu/menu-items/bg-meat.jpg") center;
+        background-size: cover;
+    }
+
+    &_bg-vegan{
+        background: url("../img/menu/menu-items/bg-vegan.jpg") center;
+        background-size: cover;
+    }
+
+    &_bg-diet{
+        background: url("../img/menu/menu-items/bg-diet.jpg") center;
+        background-size: cover;
+    } 
+}
+.menu-list__wrapper{
+    background-color: rgba(black, .55);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.menu-list__link{
+    font-family: $headerfont;
+    font-size: 40px;
+    line-height: 64px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+}
+
+.menu-list__popup{
+    padding: 60px 30px;
+    background-color: rgba(#2f3234,0.93);
+    font-weight: 300;
+    width: 0;
+    overflow: hidden;
+}
+

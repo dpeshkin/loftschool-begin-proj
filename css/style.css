@@ -71,7 +71,8 @@ ul {
     list-style: none; }
 
 .wrapper {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .container {
   max-width: 960px;
@@ -120,6 +121,23 @@ ul {
 
 .icon_natural {
   fill: #8ac03e; }
+
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.icon_social {
+  color: #5a5a5a;
+  width: 25px;
+  height: 25px; }
+  .icon_social:hover {
+    color: #fff; }
+
+.icon_phone {
+  width: 12px;
+  height: 12px;
+  margin-right: 7px; }
 
 .topline {
   height: 90px; }
@@ -395,11 +413,15 @@ ul {
   white-space: nowrap; }
 
 .menu-list__popup {
-  padding: 60px 30px;
   background-color: rgba(47, 50, 52, 0.93);
   font-weight: 300;
   width: 0;
+  padding: 0;
   overflow: hidden; }
+
+.menu-list__item_active .menu-list__popup {
+  padding: 60px 30px;
+  width: 540px; }
 
 .reviews {
   min-height: 0; }
@@ -527,3 +549,45 @@ ul {
 
 .form__submit {
   margin-right: 20px; }
+
+.map {
+  background: url("../img/map/map-bg.jpg") center;
+  background-size: cover; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #111; }
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%; }
+
+.footer__contacts {
+  margin-right: auto; }
+
+.footer__adress {
+  font-weight: 300; }
+
+.footer__phone {
+  color: #e45028;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.social-icons__item {
+  margin-right: 20px; }
+  .social-icons__item:last-child {
+    margin-right: 0px; }

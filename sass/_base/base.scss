@@ -18,6 +18,7 @@ html, body{
 section{
   min-height: 650px;
   position: relative;
+  @extend %clearfix;
 }
 
 h1, h2, h3, h4, h5{
@@ -60,6 +61,9 @@ ul{
   text-decoration: none;
   color: $maintext;
   vertical-align: middle;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .section__title{

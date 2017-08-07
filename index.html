@@ -11,41 +11,45 @@
 <body>
 	<div class="wrapper">
 		<section class="header">
-			<!-- ВЕРХНЕЕ МЕНЮ -->
-			<div class="topline">
-				<div class="container">
-					<div class="topline__logo">
-						<a href="#"><img class="topline__logo-img" src="img/icons/logo.svg" alt="burgershop logo"></a>
-					</div>
-					<div class="topline__right">
-						<ul class="nav topline__nav">
-							<li class="nav__item"><a href="#about">О нас</a></li>
+			<div class="container header__container">
+				<!-- ВЕРХНЕЕ МЕНЮ -->
+				<div class="topline">
+					<a href="#" class="topline__logo"><img class="topline__logo-img" src="img/icons/logo.svg" alt="burgershop logo"></a>
+					<nav class="topline__nav">
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#">О нас</a></li>
 							<li class="nav__item"><a href="#">Бургеры</a></li>
 							<li class="nav__item"><a href="#">Команда</a></li>
 							<li class="nav__item"><a href="#">Меню</a></li>
 							<li class="nav__item"><a href="#">Отзывы</a></li>
 							<li class="nav__item"><a href="#">Контакты</a></li>
 						</ul>
-						<a class="button topline__button" href="#">Заказать</a>
+					</nav>
+					<a href="#" class="button button_order">Заказать</a>
+					<a href="#" class="nav-toggle">
+						<span class="nav-toggle__button"></span>
+					</a>
+				</div>
+
+				<!-- ОСНОВНОЙ -->
+				<div class="header__content">
+					<div class="header__left">
+						<img class="header__img" src="img/header/burger.png" alt="">
+					</div>
+					<div class="header__right">
+						<div class="section__title header__title">Мы делаем</div>
+						<div class="header__subtitle">натуральные бургеры</div>
 					</div>
 				</div>
-			</div>
-			<!-- ОСНОВНОЙ -->
-			<div class="container">
-				<div class="header__left">
-					<img class="responsive-img" src="img/header/burger.png" alt="">
+				
+				<div class="scroll">
+					<a href="#about">
+						<svg class="icon icon_scroll">
+							<use xlink:href="img/icons/icons-sprite.svg#arrow-scroll"></use>
+						</svg>
+					</a>
 				</div>
-				<div class="header__right">
-					<div class="section__title header__title">Мы делаем</div>
-					<div class="header__subtitle">натуральные бургеры</div>
-				</div>
-			</div>
-			<div class="scroll">
-				<a href="#about">
-					<svg class="icon icon_scroll">
-						<use xlink:href="img/icons/icons-sprite.svg#arrow-scroll"></use>
-					</svg>
-				</a>
+
 			</div>
 		</section>
 
@@ -328,7 +332,7 @@
 							</div>
 						</div>
 						<div class="form__row">
-							<input type="submit" value="Заказать" class="button topline__button form__submit">
+							<input type="submit" value="Заказать" class="button button_order form__submit">
 							<input type="reset" value="Очистить" class="form_reset">
 						</div>
 					</div>  
@@ -374,7 +378,7 @@
 
 	<!-- БОКОВАЯ НАВИГАШКА -->
 	<ul class="side-nav">
-		<li class="side-nav__item side-nav__item--active"><a href="#r"></a></li>
+		<li class="side-nav__item side-nav__item_active"><a href="#r"></a></li>
 		<li class="side-nav__item"><a href="#"></a></li>
 		<li class="side-nav__item"><a href="#"></a></li>
 		<li class="side-nav__item"><a href="#"></a></li>

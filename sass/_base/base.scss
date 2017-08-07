@@ -16,9 +16,9 @@ html, body{
 }
 
 section{
+  height: 100vh;
   min-height: 650px;
   position: relative;
-  @extend %clearfix;
 }
 
 h1, h2, h3, h4, h5{
@@ -42,7 +42,7 @@ ul{
 .container{
   max-width: 960px;
   margin: 0 auto;
-  @extend %clearfix;
+  padding: 0px 10px;
 }
 
 .responsive-img{
@@ -50,21 +50,6 @@ ul{
   height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-.button{
-  display: inline-block;
-  font-size: 13px;
-  line-height: 1em;
-  padding: 13px 16px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $maintext;
-  vertical-align: middle;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .section__title{

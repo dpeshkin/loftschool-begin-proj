@@ -1,0 +1,21 @@
+.button{
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1em;
+  padding: 13px 16px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $maintext;
+  vertical-align: middle;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button_order{
+	background-color: #e45028;
+	&:hover{
+		background-color: #c1401e;
+	}
+}

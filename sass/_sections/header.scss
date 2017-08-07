@@ -1,41 +1,30 @@
 // МЕНЮ
 .topline{
-	height: 90px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
 }
 
 .topline__logo{
-  float: left;
-  line-height: 90px;
   padding: 0px 10px;
-
-  &-img{
-    display: inline-block;
-    max-height: 90px;
-    vertical-align: middle;
-  };
+  margin-right: auto;
 }
 
-.topline__right{
-	float: right;
+.topline__logo-img{
+	width: 90px;
+	height: auto;
 }
+
 
 .topline__nav{
 	padding: 0px 10px;
 }
 
-.topline__button{
-	background-color: #e45028;
-	&:hover{
-		background-color: #c1401e
-	}
-}
-
 .nav{
-	display: inline-block;
-
+	&__list{
+		display: flex;
+	}
 	&__item{
-		display: inline-block;
-		line-height: 90px;
 		margin-left: 14px;
 
 		&:after{
@@ -63,75 +52,92 @@
 			font-family: Ubuntu, Arial, Sans-serif;
 			font-weight: 500;
 			color: $maintext;
-			vertical-align: middle;
 		}
 	}
 }
 
+.nav-toggle{
+	display: flex;
+	position: relative;
+	height: 23px;
+	align-items: center;
+	margin-left: 30px;
+	display: none;
+
+	&__button{
+
+		&, &:before, &:after {
+			background: #fff;
+			width: 25px;
+			height: 5px;
+			border-radius: 3px;
+			display: block;
+		}
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+	}
+}
 
 
 // ОСНОВНОЙ КОНТЕНТ
 
 .header{
-	background-image: url(../img/header/header-bg.jpg);
+	background: url("../img/header/header-bg.jpg") center;
 	background-size: cover;
-	background-position: center;
-
-	&__left, &__right{
-		float: left;
-		width: 50%;
-		padding: 0px 10px;
-	}
-
-	&__left{
-		text-align: center;
-	}
-	&__right{
-	}
-
-	&__title{
-		margin-top: 115px;
-		line-height: 85px;
-	}
-
-	&__subtitle{
-		margin-top: 20px;
-		font-family: $subheaderfont;
-		font-size: 65px;
-		line-height: 60px;
-	}
 }
+
+.header__container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.header__content{
+	display: flex;
+	justify-content: center;
+}
+
+.header__left, .header__right{
+	flex: 1;
+}
+
+.header__img{
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.header__title{
+	margin-top: 115px;
+	line-height: 85px;
+}
+
+.header__subtitle{
+	margin-top: 20px;
+	font-family: $subheaderfont;
+	font-size: 65px;
+	line-height: 60px;
+}
+
+
 
 .scroll{
 	width: 100%;
 	text-align: center;
-	padding: 85px 0px 40px 0px;
+	padding: 40px 0px;
 }
 
-
-.side-nav{
-	position: fixed;
-	top: 90px;
-	right: 45px;
-	z-index: 999;
-	&__item{
-		border-radius: 50%;
-		padding: 5px;
-		width: 7px;
-		height: 7px;
-		margin: 0 auto 5px auto;
-		box-sizing: content-box;
-
-		& a{
-			display: block;
-			background-color: $maintext;
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
-	}
-	&__item--active{
-		border: solid 1px $maintext;
-	}
-}
 

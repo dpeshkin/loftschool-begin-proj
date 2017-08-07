@@ -141,6 +141,11 @@ ul {
   .button_order:hover {
     background-color: #c1401e; }
 
+.button_review {
+  background-color: #2f3234; }
+  .button_review:hover {
+    background-color: #1f2122; }
+
 .topline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,33 +271,55 @@ ul {
   padding: 40px 0px; }
 
 .about {
-  background-image: url(../img/webest/background.jpg);
+  background: url(../img/webest/background.jpg) center;
   background-size: cover;
-  background-position: center;
-  padding: 70px 0px 150px 0px;
+  padding: 70px 0px;
   color: #2f3234; }
 
-.about__header {
-  font-family: Gagalin, serif;
-  font-size: 72px;
-  text-align: center;
-  line-height: 64px;
-  margin-bottom: 90px; }
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
 
-.advantages {
-  width: 33.33%;
+.about__title {
+  color: #2f3234;
   text-align: center;
-  float: left;
-  padding: 0px 10px; }
-  .advantages__icon {
-    margin-bottom: 20px;
+  margin-bottom: 90px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.about__advantages {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.advantage {
+  text-align: center;
+  padding: 0px 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+  .advantage__icon {
+    margin-bottom: 40px;
     height: 100px;
     width: 100px; }
-  .advantages__header {
+  .advantage__header {
     font-family: Lifehack, serif;
     font-size: 24px;
     margin-bottom: 12px; }
-  .advantages__text {
+  .advantage__text {
     font-weight: 300; }
 
 .burgers {
@@ -308,7 +335,7 @@ ul {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 49%;
+  width: 50%;
   background-color: rgba(47, 50, 52, 0.93);
   padding: 90px 80px; }
 
@@ -457,7 +484,8 @@ ul {
 
 .review {
   width: 25%;
-  height: 29vw;
+  height: 50vh;
+  min-height: 50%;
   float: left;
   background-size: cover;
   background-position: center;
@@ -484,10 +512,6 @@ ul {
   .review__text {
     font-weight: 300;
     margin-bottom: 20px; }
-  .review__button {
-    background-color: #2f3234; }
-    .review__button:hover {
-      background-color: #1f2122; }
 
 .delivery {
   background: url("../img/delivery/delivery-bg.jpg") center;

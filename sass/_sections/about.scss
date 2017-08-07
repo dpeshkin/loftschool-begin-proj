@@ -1,27 +1,36 @@
 .about{
-	background-image: url(../img/webest/background.jpg);
+	background: url(../img/webest/background.jpg) center;
 	background-size: cover;
-	background-position: center;
-	padding: 70px 0px 150px 0px;
+	padding: 70px 0px;
 	color: #2f3234;
 }
 
-.about__header{
-	font-family: $headerfont;
-	font-size: $headertext;
-	text-align: center;
-	line-height: 64px;
-	margin-bottom: 90px
+.about__container{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
-.advantages{
-	width: 33.33%;
+.about__title{
+	color: #2f3234;
 	text-align: center;
-	float: left;
+	margin-bottom: 90px;
+	flex: 1;
+}
+
+.about__advantages{
+	flex: 4;
+	display: flex;
+	justify-content: center;
+}
+
+.advantage{
+	text-align: center;
 	padding: 0px 10px;
+	flex: 1;
 	
 	&__icon{
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		height: 100px;
 		width: 100px;
 	}

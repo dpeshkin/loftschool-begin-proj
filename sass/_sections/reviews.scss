@@ -3,7 +3,8 @@
 }
 .review {
 	width: 25%;
-	height: 29vw;
+	height: 50vh;
+	min-height: 50%;
 	float: left;
 	background-size: cover;
 	background-position: center;
@@ -42,13 +43,7 @@
 		margin-bottom: 20px;
 	}
 
-	&__button{
-		background-color: #2f3234;
-
-		&:hover{
-			background-color: #1f2122;
-		}
-	}
+	
 
 
 }

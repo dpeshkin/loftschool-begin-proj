@@ -19,3 +19,11 @@
 		background-color: #c1401e;
 	}
 }
+
+.button_review{
+  background-color: #2f3234;
+
+  &:hover{
+    background-color: #1f2122;
+  }
+}

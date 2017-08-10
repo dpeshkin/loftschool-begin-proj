@@ -1,7 +1,7 @@
 .about{
 	background: url(../img/webest/background.jpg) center;
 	background-size: cover;
-	padding: 70px 0px;
+	padding: rem(70px) rem(0px);
 	color: #2f3234;
 }
 
@@ -14,7 +14,7 @@
 .about__title{
 	color: #2f3234;
 	text-align: center;
-	margin-bottom: 90px;
+	margin-bottom: rem(90px);
 	flex: 1;
 }
 
@@ -22,23 +22,38 @@
 	flex: 4;
 	display: flex;
 	justify-content: center;
+
+	@include phones(){
+		flex-direction: column;
+	}
 }
 
 .advantage{
 	text-align: center;
-	padding: 0px 10px;
+	padding: rem(0px) rem(10px);
 	flex: 1;
+
+	@include phones(){
+		display: flex;
+		text-align: left;
+		margin-bottom: rem(50px);
+	}
 	
 	&__icon{
-		margin-bottom: 40px;
-		height: 100px;
-		width: 100px;
+		margin-bottom: rem(40px);
+		height: rem(100px);
+		width: rem(100px);
+
+		@include phones(){
+			flex: 1 0 100px;
+			margin-right: rem(20px);
+		}
 	}
 
 	&__header{
 		font-family: $subheaderfont;
-		font-size: 24px;
-		margin-bottom: 12px;
+		font-size: rem(24px);
+		margin-bottom: rem(12px);
 	}
 
 	&__text{

@@ -3,18 +3,32 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: rem(60px);
     background-color: #111;
+
+    @include phones(){
+        height: auto;
+    }
 }
 
 .footer__container{
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include phones(){
+        flex-direction: column;
+        padding: rem(15px) 0;
+    }
 }
 
 .footer__contacts{
     margin-right: auto;
+
+    @include phones(){
+        margin-right: 0;
+        margin-bottom: rem(10px);
+    }
 }
 
 .footer__adress{
@@ -28,9 +42,15 @@
     align-items: center;
 }
 
+.footer__adress, .footer__phone{
+    @include phones(){
+        justify-content: center;
+    }
+}
+
 .social-icons__item{
-    margin-right: 20px;
+    margin-right: rem(20px);
     &:last-child{
-        margin-right: 0px;
+        margin-right: rem(0px);
     }
 }

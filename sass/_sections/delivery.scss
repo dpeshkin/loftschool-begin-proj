@@ -1,58 +1,83 @@
 .delivery{
     background: url("../img/delivery/delivery-bg.jpg") center;
     background-size: cover;
-    padding-top: 90px;
+    padding-top: rem(90px);
+}
+
+.delivery__container{
+    @include phones(){
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .delivery__title{
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: rem(90px);
+
+    @include phones(){
+        margin-bottom: rem(10px);
+    }
 }
 
 .form{
     display: flex;
+
+    @include tablets(){
+        flex-direction: column;
+        padding: 0px 140px;
+    }
+
+    @include phones(){
+        padding: 0;
+        margin-bottom: rem(50px);
+    }
 }
 
 .form__col{
     flex: 1;
-    padding: 0 10px;
+    padding: 0 rem(10px);
 }
 
 .form__row{
     display: flex;
-    margin: 5px 0px 10px;
+    margin: rem(5px) rem(0px) rem(10px);
+
+    @include phones(){
+        justify-content: center;
+    }
 }
 
 .form__label-wrapper{
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
     display: flex;
     flex-direction: column;
 
     &:last-child{
-        margin-right: 0px;
+        margin-right: rem(0px);
     }
 }
 
 .form__checkbox-wrapper{
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child{
-        margin-right: 0px;
+        margin-right: rem(0px);
     }
 }
 
 .form__input{
     width: 100%;
-    border-radius: 5px;
-    padding: 10px 5px;
+    border-radius: rem(5px);
+    padding: rem(10px) rem(5px);
     
 }
 
 .form__radio{
-    margin-right: 10px;
+    margin-right: rem(10px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,6 +89,24 @@
         height:40%; 
         border-radius:50%;
         background: #e35028;
+    }
+}
+
+.form__checkbox{
+    margin-right: rem(10px);
+    position: relative;
+
+    &:checked:before {
+        content:'';
+        display:block;
+        width:rem(7px);
+        height:rem(4px);
+        border-bottom: solid rem(2px) #e35028;
+        border-left: solid rem(2px) #e35028;
+        position: absolute;
+        top: 32%;
+        left: 47%;
+        transform: translate(-50%, -50%) rotate(-50deg);
     }
 }
 
@@ -82,7 +125,7 @@
 }
 
 .form__submit{
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 

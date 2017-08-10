@@ -2,22 +2,26 @@
 .topline{
 	display: flex;
 	align-items: center;
-	padding: 10px;
+	padding: rem(10px);
 }
 
 .topline__logo{
-  padding: 0px 10px;
+  padding: rem(0px) rem(10px);
   margin-right: auto;
 }
 
 .topline__logo-img{
-	width: 90px;
+	width: rem(90px);
 	height: auto;
 }
 
 
 .topline__nav{
-	padding: 0px 10px;
+	padding: rem(0px) rem(10px);
+
+	@include tablets() {
+		display: none;
+	}
 }
 
 .nav{
@@ -25,21 +29,21 @@
 		display: flex;
 	}
 	&__item{
-		margin-left: 14px;
+		margin-left: rem(14px);
 
 		&:after{
 			content:'';
-			width: 4px;
-			height: 4px;
+			width: rem(4px);
+			height: rem(4px);
 			border-radius: 50%;
 			background-color: #fff;
 			display: inline-block;
 			vertical-align: middle;
-			margin-left: 14px;
+			margin-left: rem(14px);
 		}
 
 		&:last-child{
-			margin-right: 12px;
+			margin-right: rem(12px);
 			&:after{
 				display: none;
 			}
@@ -48,7 +52,7 @@
 		& a{
 			text-decoration: none;
 			text-transform: uppercase;
-			font-size: 13px;
+			font-size: rem(13px);
 			font-family: Ubuntu, Arial, Sans-serif;
 			font-weight: 500;
 			color: $maintext;
@@ -57,20 +61,23 @@
 }
 
 .nav-toggle{
-	display: flex;
 	position: relative;
-	height: 23px;
+	height: rem(23px);
 	align-items: center;
-	margin-left: 30px;
+	margin-left: rem(30px);
 	display: none;
+
+	@include tablets() {
+		display: flex;
+	}
 
 	&__button{
 
 		&, &:before, &:after {
 			background: #fff;
-			width: 25px;
-			height: 5px;
-			border-radius: 3px;
+			width: rem(25px);
+			height: rem(5px);
+			border-radius: rem(3px);
 			display: block;
 		}
 
@@ -101,12 +108,21 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
+	min-height: 100%;
 }
 
 .header__content{
 	display: flex;
 	justify-content: center;
+
+	@include tablets () {
+		flex-direction: column;
+		padding: 100px 170px;
+	}
+
+	@include phones(){
+		padding: 30px 50px;
+	}
 }
 
 .header__left, .header__right{
@@ -120,24 +136,41 @@
 	display: block;
 }
 
+.header__title, .header__subtitle{
+
+	@include tablets(){
+		text-align: center;
+	}
+}
+
 .header__title{
-	margin-top: 115px;
-	line-height: 85px;
+	margin-top: rem(115px);
+	line-height: rem(85px);
+
+	@include tablets(){
+		margin-top: 45px;
+	}
+
+	@include phones(){
+		font-size: rem(63px);
+	}
 }
 
 .header__subtitle{
-	margin-top: 20px;
+	margin-top: rem(20px);
 	font-family: $subheaderfont;
-	font-size: 65px;
-	line-height: 60px;
+	font-size: rem(65px);
+	line-height: rem(60px);
+
+	@include phones(){
+		font-size: rem(54px);
+	}
 }
-
-
 
 .scroll{
 	width: 100%;
 	text-align: center;
-	padding: 40px 0px;
+	padding: rem(40px) rem(0px);
 }
 
 

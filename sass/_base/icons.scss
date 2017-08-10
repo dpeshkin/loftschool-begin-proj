@@ -1,7 +1,7 @@
 .icon{
 	display: inline-block;
-	width: 30px;
-    height: 30px;
+	width: rem(30px);
+    height: rem(30px);
     fill: currentColor;
 }
 
@@ -27,8 +27,8 @@
 
 .icon_social{
     color: #5a5a5a;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
 
     &:hover{
         color: $maintext;
@@ -36,8 +36,8 @@
 }
 
 .icon_phone{
-    width: 12px;
-    height: 12px;
-    margin-right: 7px;
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(7px);
 }
 

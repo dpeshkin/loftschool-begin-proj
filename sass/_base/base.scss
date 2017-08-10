@@ -7,18 +7,23 @@ img {
 
 html, body{
 	font-family: Ubuntu, sans-serif;
-	font-size: 14px;
+	font-size: $htmltextsize;
 	font-weight: 500;
 	min-height: 100%;
   width: 100%;
-  line-height: 24px;
+  line-height: rem(24px);
   color: $maintext;
 }
 
 section{
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   position: relative;
+
+  @include tablets(){
+    height: initial;
+    min-height: 100vh;
+  }
 }
 
 h1, h2, h3, h4, h5{
@@ -37,12 +42,14 @@ ul{
 .wrapper{
   overflow: hidden;
   position: relative;
+  width: 100%;
+  min-height: 100%;
 }
 
 .container{
-  max-width: 960px;
+  max-width: rem(960px);
   margin: 0 auto;
-  padding: 0px 10px;
+  padding: rem(0px) rem(10px);
 }
 
 .responsive-img{
@@ -56,7 +63,11 @@ ul{
   font-family: $headerfont;
   font-size: $headertext;
   color: $yellowtext;
-  line-height: 64px;
+  line-height: rem(64px);
+
+  @include phones(){
+    font-size: rem(50px);
+  }
 }
 
 

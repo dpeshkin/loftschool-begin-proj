@@ -1,16 +1,20 @@
 .side-nav{
 	position: fixed;
-	top: 90px;
-	right: 45px;
+	top: rem(90px);
+	right: rem(45px);
 	z-index: 999;
+
+	@include tablets(){
+		display: none;
+	}
 	&__item{
 		border-radius: 50%;
-		padding: 5px;
-		width: 7px;
-		height: 7px;
-		margin: 0 auto 5px auto;
+		padding: rem(5px);
+		width: rem(7px);
+		height: rem(7px);
+		margin: 0 auto rem(5px) auto;
         box-sizing: content-box;
-        border: solid 1px transparent;
+        border: solid rem(1px) transparent;
 
 		& a{
 			display: block;
@@ -21,6 +25,6 @@
 		}
 	}
 	&__item:hover, &__item_active{
-		border: solid 1px $maintext;
+		border: solid rem(1px) $maintext;
 	}
 }

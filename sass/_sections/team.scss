@@ -10,18 +10,25 @@
     right: 0;
     width: 50%;
     background-color: rgba(#2f3234,0.93);
-    padding: 90px 80px;
+    padding: rem(90px) rem(80px);
+
+    @include tablets(){
+        width: 100%;
+        position: relative;
+    }
 }
 
 .team__title{
-    margin-bottom: 90px;
+    margin-bottom: rem(90px);
+    @include tablets(){
+        text-align: center;
+    }
 }
 
 .team-members{        
 }
 
 .team-member__item{
-    margin-bottom: 30px;
 
     &_active{
         .team-member__card{
@@ -39,19 +46,23 @@
 .team-member__name{
     font-family: $headerfont;
     line-height: 2em;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
     display: flex;
     align-items: center;
+    
+    @include tablets(){
+        justify-content: center;
+    }
 
     &:before{
         content: '';
         display: inline-block;
         width: 0;
         height: 0;
-        border-top: solid $yellowtext 5px;
-        border-left: solid transparent 5px;
-        border-right: solid transparent 5px;
-        margin-right: 10px;
+        border-top: solid $yellowtext rem(5px);
+        border-left: solid transparent rem(5px);
+        border-right: solid transparent rem(5px);
+        margin-right: rem(10px);
     }
 }
 
@@ -59,16 +70,22 @@
     height: 0;
     overflow: hidden;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
+
+    @include tablets(){
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(20px);
+    }
 }
 
 .team-member__photo{
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    margin: 0 16px;
+    margin: 0 rem(16px);
     font-size: 0;
     align-items: center;
     display: flex;
@@ -81,10 +98,16 @@
 
 .team-member__position{
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 .team-member__text{
     font-weight: 300;
+}
+
+.team-member__position, .team-member__text{
+    @include tablets(){
+        text-align: center;
+    }
 }
 

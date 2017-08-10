@@ -1,7 +1,7 @@
 .menu{
     background: url("../img/menu/menu-bg.jpg") center;
     background-size: cover;
-    padding-top: 110px;
+    padding-top: rem(110px);
 }
 
 .menu__title{
@@ -13,11 +13,16 @@
     top: 0;
     right: 0;
     bottom: 0;
+
+    @include tablets(){
+        width: 100%;
+    }
 }
 
 .menu-list{
     display: flex;
     height: 100%;
+    justify-content: flex-end;
 }
 
 .menu-list__item{
@@ -25,8 +30,13 @@
 }
 
 .menu-list__type{
-    width: 80px;
+    width: rem(80px);
     position: relative;
+    
+    @include tablets(){
+        width: rem(50px);
+    }
+
     &_bg-meat{
         background: url("../img/menu/menu-items/bg-meat.jpg") center;
         background-size: cover;
@@ -52,8 +62,8 @@
 }
 .menu-list__link{
     font-family: $headerfont;
-    font-size: 40px;
-    line-height: 64px;
+    font-size: rem(40px);
+    line-height: rem(64px);
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -74,8 +84,12 @@
 
 .menu-list__item_active{
     .menu-list__popup{
-        padding: 60px 30px;
-        width: 540px;
+        padding: rem(60px) rem(30px);
+        width: rem(540px);
+
+        @include tablets(){
+            width: 100%;
+        }
     }
 }
 

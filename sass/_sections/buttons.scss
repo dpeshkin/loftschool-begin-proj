@@ -1,9 +1,9 @@
 .button{
   display: inline-block;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 1em;
-  padding: 13px 16px;
-  border-radius: 5px;
+  padding: rem(13px) rem(16px);
+  border-radius: rem(5px);
   text-transform: uppercase;
   text-decoration: none;
   color: $maintext;

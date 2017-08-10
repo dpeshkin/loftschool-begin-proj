@@ -1,50 +1,79 @@
 .reviews{
-	min-height: 0;
+	display: flex;
+	flex-wrap: wrap;
+	min-height: auto;
+	height: auto;
 }
 .review {
-	width: 25%;
-	height: 50vh;
+	flex: 1 0 25%;
+	height: 30vw;
 	min-height: 50%;
-	float: left;
 	background-size: cover;
 	background-position: center;
 	filter: grayscale(100%);
 	position: relative;
 	overflow: hidden;
 
+	@include tablets(){
+		flex-basis: 50%;
+		height: 33vw;
+		min-height: 30%;
+	}
+
 	&:hover{
 		.review__caption{
 			bottom: 0;
 		}
 	}
+}	
 
-	&__caption{
-		height: 100%;
-		padding: 50px 20px;
-		background-color: rgba(0, 0, 0, 0.5);
-		position: absolute;
-		bottom: 100%;
-		transition: all .5s ease-in-out;
+.review__caption{
+	height: 100%;
+	width: 100%;
+	padding: rem(50px) rem(20px);
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 100%;
+	transition: all .5s ease-in-out;
 
-		
+	@include tablets(){
+		text-align: center;
+		padding: rem(30px) rem(50px);
 	}
 
-	&__title{
-		font-family: $headerfont;
-		font-size: 14px;
-		line-height: 2em;
-		margin-bottom: 20px;
-		text-transform: uppercase;
-
+	@include phones(){
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
-	
-	&__text{
-		font-weight: 300;
-		margin-bottom: 20px;
-	}
-
-	
 
 
 }
+
+.review__title{
+		font-family: $headerfont;
+		font-size: rem(14px);
+		line-height: 2em;
+		margin-bottom: rem(20px);
+		text-transform: uppercase;
+		
+		@include tablets(){
+			margin-bottom: rem(10px);
+		}
+
+		@include phones(){
+			display: none;
+		}
+}
+	
+.review__text{
+		font-weight: 300;
+		margin-bottom: rem(20px);
+
+		@include phones(){
+			display: none;
+		}
+
+	}
+
 

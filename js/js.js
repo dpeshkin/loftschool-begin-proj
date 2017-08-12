@@ -1,4 +1,5 @@
 $(".nav-toggle__button").on("click", function (e){
+    e.preventDefault();
     if($(e.target).hasClass("nav-toggle__button")){
         $(e.target).removeClass("nav-toggle__button").addClass("nav-toggle__button_close");
         $(".topline__nav").addClass("topline__nav_active");

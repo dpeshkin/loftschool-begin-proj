@@ -21,7 +21,7 @@ section{
   position: relative;
 
   @include tablets(){
-    height: initial;
+    height: auto;
     min-height: 100vh;
   }
 }

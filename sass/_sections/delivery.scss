@@ -1,14 +1,12 @@
 .delivery{
     background: url("../img/delivery/delivery-bg.jpg") center;
     background-size: cover;
-    padding-top: rem(90px);
 }
 
 .delivery__container{
-    @include phones(){
-        display: flex;
-        flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(90px);
 }
 
 .delivery__title{

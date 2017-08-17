@@ -76,20 +76,12 @@
 
 .menu-list__popup{
     background-color: rgba(#2f3234,0.93);
-    font-weight: 300;
     width: 0;
-    padding: 0;
     overflow: hidden;
+    transition: all .5s;
 }
 
-.menu-list__item_active{
-    .menu-list__popup{
-        padding: rem(60px) rem(30px);
-        width: rem(540px);
-
-        @include tablets(){
-            width: 100%;
-        }
-    }
+.popup-content{
+    padding: rem(60px) rem(30px);
+    font-weight: 300;
 }
-

@@ -45,5 +45,26 @@ $(function(){
         item.hasClass(activeClass) ? closeMenu() : openMenu();
             
     });
-})
+});
+
+
+// team acco
+$(function(){
+    $(".team-member__item").on("click", function(e){
+        e.preventDefault();
+        var item = $(e.currentTarget),
+            itemSiblings = item.siblings(),
+            active = "team-member__item_active",
+            wrapper = ".team-member__card-wrapper",
+            wrapperEl = item.children(wrapper),
+            card = item.find(".team-member__card");
+            
+        item.hasClass(active) ? 
+            (item.removeClass(active), wrapperEl.height(0)) :
+                (item.addClass(active), wrapperEl.height($(card).height()),
+                    itemSiblings.removeClass(active), itemSiblings.children(wrapper).height(0));
+    })
+});
+
+
 

@@ -748,6 +748,8 @@ ul {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  .team-member__name:hover {
+    color: #f9b43b; }
   .team-member__name:before {
     -webkit-transition: all .5s;
     transition: all .5s;

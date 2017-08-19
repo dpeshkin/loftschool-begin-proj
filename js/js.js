@@ -67,4 +67,52 @@ $(function(){
 });
 
 
+// burgers slider
+$(function(){
+    
+    var flag = true;
 
+    function moveSlide(slider, slideNum){
+
+        var list = slider.find(".slider__list"),
+            items = list.children(".slider__item"),
+            active = items.filter(".slider__item_active"),
+            next = items.eq(slideNum);
+        
+            flag = false;
+            list.css({"left":-slideNum*100+"%"});
+            active.removeClass("slider__item_active");
+            next.addClass("slider__item_active");
+            $(list).bind("transitionend", function(){flag = true});
+        
+    };
+
+    $(".slider__controls").on("click", function(e){
+        
+        e.preventDefault();
+
+        var button = $(e.currentTarget),
+            slider = button.closest(".slider"),
+            items = slider.find(".slider__item"),
+            active = items.filter(".slider__item_active"),
+            nextItem, edgeItem, slideNum;
+
+            
+             
+        if (button.hasClass("slider__controls_right")){
+            nextItem = active.next();
+            edgeItem = items.first();
+        }
+
+       
+
+        if (button.hasClass("slider__controls_left")){
+            nextItem = active.prev();
+            edgeItem = items.last();
+        }
+
+        slideNum = nextItem.length ? nextItem.index() : edgeItem.index();
+
+        if (flag == true) moveSlide (slider, slideNum);
+    });
+});

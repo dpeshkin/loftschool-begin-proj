@@ -20,10 +20,10 @@ section{
   min-height: rem(650px);
   position: relative;
 
-  @include tablets(){
-    height: auto;
-    min-height: 100vh;
-  }
+  // @include tablets(){
+  //   height: auto;
+  //   min-height: 100vh;
+  // }
 }
 
 h1, h2, h3, h4, h5{

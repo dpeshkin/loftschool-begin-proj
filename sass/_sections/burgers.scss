@@ -196,11 +196,14 @@
 }
 
 .burgers__caption_top{
-    background: #f08c33;
+    background: rgba(#e35028, .4);
     border-radius: 7px;
     top: -60px;
+    cursor: pointer;
+    transition: all .3s;
 
     &:hover{
+        background: #e35028;
         .burgers__popup{
             display: block;
         }

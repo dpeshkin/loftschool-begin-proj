@@ -1,13 +1,10 @@
 .reviews{
 	display: flex;
 	flex-wrap: wrap;
-	min-height: auto;
-	height: auto;
 }
 .review {
 	flex: 1 0 25%;
-	height: 30vw;
-	min-height: 50%;
+	height: 50%;
 	background-size: cover;
 	background-position: center;
 	filter: grayscale(100%);
@@ -16,13 +13,13 @@
 
 	@include tablets(){
 		flex-basis: 50%;
-		height: 33vw;
-		min-height: 30%;
+		height: 25%;
 	}
 
 	&:hover{
 		.review__caption{
 			bottom: 0;
+			opacity: 1;
 		}
 	}
 }	
@@ -34,6 +31,7 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	bottom: 100%;
+	opacity: 0;
 	transition: all .5s ease-in-out;
 
 	@include tablets(){

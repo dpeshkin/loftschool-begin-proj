@@ -7,7 +7,7 @@
 .about__container{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	padding: rem(70px) rem(0px);
 	min-height: 100vh;
 }
@@ -15,7 +15,7 @@
 .about__title{
 	color: #2f3234;
 	text-align: center;
-	// margin-bottom: rem(90px);
+	margin-bottom: rem(90px);
 }
 
 .about__advantages{

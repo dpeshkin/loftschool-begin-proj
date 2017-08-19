@@ -406,15 +406,16 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5rem 0rem;
   min-height: 100vh; }
 
 .about__title {
   color: #2f3234;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 6.42857rem; }
 
 .about__advantages {
   display: -webkit-box;
@@ -655,11 +656,16 @@ ul {
           align-items: center; }
 
 .burgers__caption_top {
-  background: #f08c33;
+  background: rgba(227, 80, 40, 0.4);
   border-radius: 7px;
-  top: -60px; }
-  .burgers__caption_top:hover .burgers__popup {
-    display: block; }
+  top: -60px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+  .burgers__caption_top:hover {
+    background: #e35028; }
+    .burgers__caption_top:hover .burgers__popup {
+      display: block; }
   @media screen and (max-width: 480px) {
     .burgers__caption_top {
       top: -100px; } }
@@ -929,16 +935,13 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-height: auto;
-  height: auto; }
+      flex-wrap: wrap; }
 
 .review {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
-  height: 30vw;
-  min-height: 50%;
+  height: 50%;
   background-size: cover;
   background-position: center;
   -webkit-filter: grayscale(100%);
@@ -949,10 +952,10 @@ ul {
     .review {
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
-      height: 33vw;
-      min-height: 30%; } }
+      height: 25%; } }
   .review:hover .review__caption {
-    bottom: 0; }
+    bottom: 0;
+    opacity: 1; }
 
 .review__caption {
   height: 100%;
@@ -961,6 +964,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 100%;
+  opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
   @media screen and (max-width: 768px) {
@@ -1011,7 +1015,10 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 6.42857rem; }
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .delivery__title {
   text-align: center;

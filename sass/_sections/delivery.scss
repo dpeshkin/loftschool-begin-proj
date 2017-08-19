@@ -6,7 +6,8 @@
 .delivery__container{
     display: flex;
     flex-direction: column;
-    padding-top: rem(90px);
+    height: 100%;
+    justify-content: center;
 }
 
 .delivery__title{

@@ -27,14 +27,21 @@
 
 .menu-list__item{
     display: flex;
+    &_active .menu-list__link{
+        color: $yellowtext;
+    }
 }
 
 .menu-list__type{
-    width: rem(80px);
+    width: rem(60px);
     position: relative;
-    
-    @include tablets(){
-        width: rem(50px);
+    transition: all .5s;
+
+    &_hidden{
+        @include phones(){
+            width: rem(0px);
+            overflow: hidden;
+        }
     }
 
     &_bg-meat{
@@ -63,7 +70,6 @@
 .menu-list__link{
     font-family: $headerfont;
     font-size: rem(40px);
-    line-height: rem(64px);
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -84,4 +90,36 @@
 .popup-content{
     padding: rem(60px) rem(30px);
     font-weight: 300;
+    position: relative;
+}
+
+.popup-close{
+    position: absolute;
+    top: rem(30px);
+    right: rem(30px);
+    width: rem(25px);
+    height: rem(25px);
+    cursor: pointer;
+    display: none;
+
+    @include phones(){
+        display: block;
+    }
+
+    &:before, &:after {
+        content: "";
+        background: #c1c2c2;
+        width: rem(25px);
+        height: rem(5px);
+        border-radius: rem(3px);
+        position: absolute;
+        top: 50%;
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
 }

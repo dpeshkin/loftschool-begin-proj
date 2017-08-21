@@ -17,6 +17,8 @@ $(function(){
 
 // menu acco
 
+// $(f
+
 $(function(){
     $(".menu-list__item").on("click", function(e){
         e.preventDefault();
@@ -24,22 +26,33 @@ $(function(){
         var item = $(e.currentTarget),
             itemSiblings = $(e.currentTarget).siblings(),
             activeClass = "menu-list__item_active",
-            windowWidth = $(window).width(),
             popup = item.children(".menu-list__popup"),
             popupSiblings = itemSiblings.children(".menu-list__popup"),
-            popupWidth = (windowWidth > 768) ? 560 : windowWidth - $(".menu-list__type").width()*3;
-            $(".popup-content").width(popupWidth-60);
+            popupWidth;
+
+        if(window.innerWidth>768){
+            popupWidth = 560;
+        } else if(window.innerWidth>480){
+            popupWidth = window.innerWidth - $(".menu-list__type").width()*3;
+        } else{
+            popupWidth = window.innerWidth - $(".menu-list__type").width();
+        }
+        
+        $(".popup-content").width(popupWidth-60);
+            
         
         function closeMenu(){
             item.removeClass(activeClass);
-            popup.width(0);  
+            popup.width(0); 
+            itemSiblings.children(".menu-list__type").removeClass("menu-list__type_hidden");
         }
 
         function openMenu(){
             item.addClass(activeClass);
             itemSiblings.removeClass(activeClass);
             popup.width(popupWidth);
-            popupSiblings.width(0);  
+            popupSiblings.width(0);
+            itemSiblings.children(".menu-list__type").addClass("menu-list__type_hidden");
         }
         
         item.hasClass(activeClass) ? closeMenu() : openMenu();
@@ -80,7 +93,7 @@ $(function(){
             next = items.eq(slideNum);
         
             flag = false;
-            list.css({"left":-slideNum*100+"%"});
+            list.css({"transform":"translateX("+-slideNum*100+"%"});
             active.removeClass("slider__item_active");
             next.addClass("slider__item_active");
             $(list).bind("transitionend", function(){flag = true});
@@ -115,4 +128,28 @@ $(function(){
 
         if (flag == true) moveSlide (slider, slideNum);
     });
+});
+
+// onepagescroll
+
+$(function(){
+    var flag = true;
+    
+        function pageScroll(sectionNum){
+    
+            var list = slider.find(".slider__list"),
+                items = list.children(".slider__item"),
+                active = items.filter(".slider__item_active"),
+                next = items.eq(slideNum);
+            
+                flag = false;
+                list.css({"left":-slideNum*100+"%"});
+                active.removeClass("slider__item_active");
+                next.addClass("slider__item_active");
+                $(list).bind("transitionend", function(){flag = true});
+            
+        }; 
+
+
+
 });

@@ -41,7 +41,7 @@
 
 .team-member__name{
     font-family: $headerfont;
-    line-height: 2em;
+    line-height: rem(28px);
     margin-bottom: rem(10px);
     display: flex;
     align-items: center;
@@ -50,7 +50,10 @@
     
     @include tablets(){
         justify-content: center;
+        font-size: rem(25px);
     }
+
+
 
     &:hover{
         color: $yellowtext;

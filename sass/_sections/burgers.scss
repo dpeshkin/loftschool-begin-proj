@@ -1,21 +1,19 @@
 .burgers{
     background: linear-gradient(#f9b43b, #eb8e38, #f9b43b);
-    height: auto;
-    // display: flex;
-    // justify-content: center;
-
+    display: flex;
+    align-items: center;
     @include tablets(){
-        padding: 125px 0;
+        height: auto;
+        padding: 50px 0px;
     }
 
-    @include phones(){
-        padding: 0;
-    }
 }
 
 .burgers__container{
-    // min-height: 100vh;
     position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
 
     @include tablets(){
         max-width: 644px;
@@ -32,6 +30,7 @@
     display: flex;
     align-items: center;
     position: absolute;
+    z-index: 999;
     &_left{
         right: 100%;
     }
@@ -60,7 +59,7 @@
 .slider__wrapper{
     overflow-x: hidden;
     position: relative;
-    min-height: 100vh;
+    // height: 100%;
     display: flex;
     align-items: center;
 }
@@ -69,9 +68,9 @@
     white-space: nowrap;
     font-size: 0;
     margin: 0;
-    position: absolute;
+    // position: absolute;
     width: 100%;
-    left: 0;
+    // left: 0;
     transition: all 1s;
 }
 
@@ -81,8 +80,8 @@
     width: 100%;
     height: 100%;
     white-space: normal;
-    display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
+    position: relative;
 }
 
 .burgers__slide{
@@ -104,33 +103,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 rem(10px);
 }
 
 .burgers__left{
     @include tablets(){
-        padding: 0 40px;
+        padding: 0 rem(40px);
     }
 
     @include phones(){
-        padding: 0 10px;
+        padding: 0 rem(10px);
         justify-content: flex-end;
     }
 }
 
 .burgers__right{
     @include tablets(){
-        padding: 0 10px;
+        padding: 0 rem(10px);
         align-items: center;
     }
 }
 
 .burgers__title{
     color: $maintext;
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
 
     @include tablets(){
-        padding: 0 50px
+        padding: 0 rem(50px);
     }
 
     @include phones(){
@@ -139,7 +138,7 @@
 }
 
 .burgers__text{
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     font-weight: 300;
 
     @include phones(){
@@ -156,14 +155,14 @@
 .burgers__order{
     display: flex;
     align-items: baseline;
-    padding: 30px 0;
+    padding: rem(30px) 0;
     color: #e35028;
 }
 
 .burgers__price{
     font-size: $headertext;
     font-family: $headerfont;
-    margin-right: 10px;
+    margin-right: rem(10px);
 }
 
 .burgers__button{
@@ -172,8 +171,8 @@
 
 .burgers__currency{
     font-family: $headerfont;
-    font-size: 30px;
-    margin-right: 30px;
+    font-size: rem(30px);
+    margin-right: rem(30px);
 }
 
 .burgers__img{
@@ -182,12 +181,13 @@
 }
 
 .burgers__photo{
+    max-height: rem(300px);
     max-width: 100%;
 }
 
 .burgers__caption{
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -197,8 +197,8 @@
 
 .burgers__caption_top{
     background: rgba(#e35028, .4);
-    border-radius: 7px;
-    top: -60px;
+    border-radius: rem(7px);
+    top: rem(-80px);
     cursor: pointer;
     transition: all .3s;
 
@@ -209,22 +209,20 @@
         }
     }
 
-    @include phones(){
-        top: -100px;
+    @include tablets(){
+        position: relative;
+        top: 0;
     }
 }
 
 .burgers__caption_bottom{
-    bottom: - 80px;
+    bottom: rem(-80px);
 
     @include tablets(){
-        top: -60px;
+        top: 0;
         right: 0;
     }
 
-     @include phones(){
-        top: -100px;
-    }
 }
 
 .burgers__sub{
@@ -235,7 +233,7 @@
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-    font-size: 24px;
+    font-size: rem(24px);
 
 }
 
@@ -245,10 +243,11 @@
     top: 0;
     background: rgba(255,255,255, .9);
     color: #2f3234;
-    padding: 20px;
-    width: 270px;
-    border-radius: 7px;
+    padding: rem(20px);
+    width: rem(270px);
+    border-radius: rem(7px);
     display: none;
+    z-index: 2
 }
 .contents{
     display: flex;
@@ -258,7 +257,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 
     &:last-child{
         margin-bottom: 0;

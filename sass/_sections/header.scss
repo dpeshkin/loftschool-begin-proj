@@ -165,10 +165,6 @@
 .header{
 	background: url("../img/header/header-bg.jpg") center;
 	background-size: cover;
-
-	@include phones(){
-		// height: auto;
-	}
 }
 
 .header__container{
@@ -188,7 +184,7 @@
 	}
 
 	@include phones(){
-		padding: rem(30px) rem(50px);
+		padding: 0 rem(50px);
 	}
 }
 
@@ -244,7 +240,7 @@
 .scroll{
 	width: 100%;
 	text-align: center;
-	padding: rem(40px) rem(0px);
+	padding:  0 0 rem(50px);
 }
 
 

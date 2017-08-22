@@ -336,7 +336,7 @@ ul {
       padding: 0 12.14286rem; } }
   @media screen and (max-width: 480px) {
     .header__content {
-      padding: 2.14286rem 3.57143rem; } }
+      padding: 0 3.57143rem; } }
 
 .header__left, .header__right {
   -webkit-box-flex: 1;
@@ -387,7 +387,7 @@ ul {
 .scroll {
   width: 100%;
   text-align: center;
-  padding: 2.85714rem 0rem; }
+  padding: 0 0 3.57143rem; }
 
 .about {
   background: url(../img/webest/background.jpg) center;
@@ -405,13 +405,16 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5rem 0rem;
+  padding: 5rem 0.71429rem;
   min-height: 100vh; }
 
 .about__title {
   color: #2f3234;
   text-align: center;
   margin-bottom: 6.42857rem; }
+  @media screen and (max-width: 480px) {
+    .about__title {
+      margin-bottom: 5rem; } }
 
 .about__advantages {
   display: -webkit-box;
@@ -857,7 +860,8 @@ ul {
   padding-top: 7.85714rem; }
 
 .menu__title {
-  color: #fff; }
+  color: #fff;
+  padding: 0 5.71429rem; }
 
 .menu__wrapper {
   position: absolute;

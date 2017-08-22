@@ -24,7 +24,7 @@
 
     @include tablets(){
         flex-direction: column;
-        padding: 0px 140px;
+        padding: 0 rem(140px);
     }
 
     @include phones(){

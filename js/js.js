@@ -153,3 +153,43 @@ $(function(){
 
 
 });
+
+
+// ya map
+
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){
+        var zoomSize;
+        (window.innerWidth<768) ? zoomSize = 10 : zoomSize = 12;
+
+        myMap = new ymaps.Map("map", {
+            center: [59.93, 30.35],
+			zoom: zoomSize,
+			controls: []
+        });
+        
+        myMap.behaviors.disable('scrollZoom');
+        if(window.innerWidth<768) myMap.behaviors.disable('drag');
+
+		var coords = [
+			[59.890441651424574,30.315672543076538],
+			[59.97276137697629,30.310522701767965],
+			[59.946765155076044,30.38682618382363],
+			[59.915785728842906,30.497738387774955]
+		],
+			myCollection = new ymaps.GeoObjectCollection({}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/icons/map-marker.png',
+				iconImageSize: [46, 57],
+				iconImageOffset: [-26, -52]
+			});
+
+		for (var i = 0; i < coords.length; i++) {
+			myCollection.add(new ymaps.Placemark(coords[i]));
+        }
+
+        myMap.geoObjects.add(myCollection);
+    };
+	

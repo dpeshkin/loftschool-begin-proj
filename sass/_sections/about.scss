@@ -45,7 +45,7 @@
 		width: rem(100px);
 
 		@include phones(){
-			flex: 1 0 100px;
+			flex: 1 0 rem(100px);
 			margin-right: rem(20px);
 		}
 	}

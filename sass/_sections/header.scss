@@ -6,7 +6,7 @@
 }
 
 .topline__logo{
-  padding: rem(0px) rem(10px);
+  padding: 0 rem(10px);
   margin-right: auto;
 }
 
@@ -68,7 +68,7 @@
 			margin-left: rem(14px);
 
 			@include tablets(){
-				margin: 20px 0;
+				margin: rem(20px) 0;
 			}
 		}
 
@@ -94,10 +94,6 @@
 		}
 	}
 }
-
-// .nav-toggle_close{
-	
-// }
 
 .nav-toggle{
 	position: relative;
@@ -171,7 +167,7 @@
 	background-size: cover;
 
 	@include phones(){
-		height: auto;;
+		// height: auto;
 	}
 }
 
@@ -188,11 +184,11 @@
 
 	@include tablets () {
 		flex-direction: column;
-		padding: 0 170px;
+		padding: 0 rem(170px);
 	}
 
 	@include phones(){
-		padding: 30px 50px;
+		padding: rem(30px) rem(50px);
 	}
 }
 

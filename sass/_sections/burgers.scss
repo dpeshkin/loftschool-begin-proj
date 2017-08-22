@@ -2,11 +2,6 @@
     background: linear-gradient(#f9b43b, #eb8e38, #f9b43b);
     display: flex;
     align-items: center;
-    @include tablets(){
-        // height: auto;
-        padding: rem(50px) 0;
-    }
-
 }
 
 .burgers__container{

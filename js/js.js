@@ -100,15 +100,17 @@ $(function(){
                 transform = "translateY(";
                 break;
         };
-        if(slideNum != -1){
+        if(slideNum != -1 && slideNum != active.index()){
             itemsList.css({"transform":transform+-slideNum*100+"%"});
             next.addClass("active").siblings().removeClass("active");
-            $(itemsList).bind("transitionend", function(){flag = true;}); 
+            $(itemsList).bind("transitionend", function(){flag = true;});
+            if (direction == "vertical")
+                $(".side-nav").children().eq(slideNum).addClass("active").siblings().removeClass("active");
         }else{flag = true};
              
     };
 
-    //BURGERS SLIDER
+    //BURGERS-SLIDER
     $(".slider__controls").on("click", function(e){
         
         e.preventDefault();
@@ -136,7 +138,7 @@ $(function(){
     });
 
 
-    //ONEPAGESCROLL
+    //ONEPAGE-SCROLL
     $('.wrapper').on("wheel", function (e) {
 
         var deltaY = e.originalEvent.deltaY,
@@ -159,7 +161,44 @@ $(function(){
         if (flag == true) moveSlide (itemsList, slideNum, "vertical");
             
     });
-        
+
+    // SIDE-NAV
+    function generateSideNav(){
+        $("section").each(function(){
+            var dot = $("<li>", {
+                attr : {
+                    class: "side-nav__item"
+                },
+                html: "<a href='#'></a>"
+            });
+            $(".side-nav").append(dot);
+        });
+        $(".side-nav").children().first().addClass("active");
+            
+    };
+    generateSideNav();
+
+    $(".side-nav").on('click',".side-nav__item", function(e){
+
+        e.preventDefault();
+        var item = $(e.currentTarget),
+            itemsList = $(".maincontent"),
+            slideNum = item.index();
+
+        if (flag == true) {
+            moveSlide (itemsList, slideNum, "vertical");
+        }
+    })
+    
+    // TOP-NAV
+    $('[data-scroll-to]').on('click', function (e) {
+        e.preventDefault();
+        var elem = $(e.target),
+            itemsList = $(".maincontent"),
+            slideNum = parseInt(elem.attr('data-scroll-to'));
+
+        if (flag == true) moveSlide (itemsList, slideNum, "vertical");
+      });
 });
 
 
@@ -203,83 +242,3 @@ $(function(){
     };
 	
 
-
-//     // SLIDER
-// $(function(){
-    
-//     var flag = true;
-
-//     function moveSlide(itemsList, slideNum, direction){
-
-//         var active = $(itemsList).find(".active"),
-//             next = itemsList.children().eq(slideNum);
-        
-//         flag = false;
-//         switch (direction){
-//             case "horizontal":
-//                 itemsList.css({"transform":"translateX("+-slideNum*100+"%"});
-//                 break;
-//             case "vertical":
-//                 itemsList.css({"transform":"translateY("+-slideNum*100+"%"});
-//                 break;
-//         };
-//         next.addClass("active").siblings().removeClass("active")
-//         $(itemsList).bind("transitionend", function(){flag = true}); 
-          
-//     };
-
-//     //BURGERS SLIDER
-//     $(".slider__controls").on("click", function(e){
-        
-//         e.preventDefault();
-
-//         var button = $(e.currentTarget),
-//             slider = button.closest(".slider"),
-//             itemsList = slider.find(".slider__list"),
-//             items = itemsList.find(".slider__item"),
-//             active = items.filter(".active"),
-//             nextItem, edgeItem, slideNum;
-
-//         if (button.hasClass("slider__controls_right")){
-//             nextItem = active.next();
-//             edgeItem = items.first();
-//         }
-
-//         if (button.hasClass("slider__controls_left")){
-//             nextItem = active.prev();
-//             edgeItem = items.last();
-//         }
-
-//         slideNum = nextItem.length ? nextItem.index() : edgeItem.index();
-
-//         if (flag == true) moveSlide (itemsList, slideNum, "horizontal") // передаем переменные из обработчиков событий + направление слайдера.
-//     });
-
-
-//     //ONEPAGESCROLL
-//     $('.wrapper').on("wheel", function (e) {
-
-//         var deltaY = e.originalEvent.deltaY,
-//             direction = deltaY < 0 ? 'up' : 'down',
-//             itemsList = $(".maincontent"),
-//             items = itemsList.find("section"),
-//             active = items.filter(".active"),
-//             nextItem, edgeItem, slideNum;
-
-//         if (direction == "down"){
-//             nextItem = active.next();
-//             edgeItem = items.last();
-//         }
-
-//         if (direction == "up"){
-//             nextItem = active.prev();
-//             edgeItem = items.first();
-//         }
-
-//         slideNum = nextItem.length ? nextItem.index() : edgeItem.index();
-
-//         if (flag == true) moveSlide (itemsList, slideNum, "vertical");
-            
-//     });
-      
-// });

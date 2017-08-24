@@ -24,7 +24,7 @@
 			border-radius: 50%;
 		}
 	}
-	&__item:hover, &__item_active{
+	&__item:hover, & .active{
 		border: solid rem(1px) $maintext;
 	}
 }

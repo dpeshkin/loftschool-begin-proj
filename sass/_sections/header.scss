@@ -72,6 +72,13 @@
 			}
 		}
 
+		& a{
+			border-bottom: solid 1px transparent;
+			&:hover{
+				border-color: #fff;
+			}	
+		}
+
 		&:last-child{
 			margin-right: rem(12px);
 			&:after{

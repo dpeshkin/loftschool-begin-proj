@@ -248,6 +248,10 @@ ul {
     @media screen and (max-width: 768px) {
       .nav__item:after {
         margin: 1.42857rem 0; } }
+  .nav__item a {
+    border-bottom: solid 1px transparent; }
+    .nav__item a:hover {
+      border-color: #fff; }
   .nav__item:last-child {
     margin-right: 0.85714rem; }
     .nav__item:last-child:after {
@@ -1267,5 +1271,5 @@ ul {
       width: 100%;
       height: 100%;
       border-radius: 50%; }
-  .side-nav__item:hover, .side-nav__item_active {
+  .side-nav__item:hover, .side-nav .active {
     border: solid 0.07143rem #fff; }

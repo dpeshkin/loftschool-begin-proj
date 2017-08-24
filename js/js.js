@@ -273,5 +273,9 @@ $(function(){
 
         myMap.geoObjects.add(myCollection);
     };
-	
+    
+// FANCYBOX
+
+$("[data-fancybox]").fancybox({
+});
 

@@ -77,4 +77,14 @@
 
 	}
 
+.review-popup{
+	position: relative;
+	display: none;
+	margin: 0 rem(10px);
+	border-radius: rem(10px);
+	& .review__title, .review__text{
+		color: #000;
+	}
+
+}
 

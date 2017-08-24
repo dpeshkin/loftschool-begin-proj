@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BurgerShop - LoftSchool diplom project</title>
 	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
-	<link rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css">		
+	<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.css">		
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -705,56 +705,56 @@
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-2.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-3.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-4.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-5.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 					</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-6.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-7.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>
 			<div class="review" style="background-image: url(img/reviews/face-8.jpg)">
 				<div class="review__caption">
 					<div class="review__title">Константин Спилберг</div>
 					<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<a href="#" class="button button_review">Подробнее</a>
+					<a href="#" class="button button_review" data-fancybox data-src="#review1">Подробнее</a>
 				</div>
 			</div>	
 		</section>
@@ -872,12 +872,19 @@
 	</div>
 
 	<!-- БОКОВАЯ НАВИГАШКА -->
-	<ul class="side-nav">
-	</ul>
+	<ul class="side-nav"></ul>
+
+	<!-- ТЕКС ОТЗЫВА -->
+	<div class="review-popup" id="review1">
+		<div class="popup-close"><a href="#"></a></div>
+		<div class="review__title">Константин Спилберг</div>
+		<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+    </div>
+
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/svg4everybody/lib/svg4everybody.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="libs/magnific-popup/dist/jquery.magnific-popup.js"></script>
+	<script src="libs/fancybox/dist/jquery.fancybox.js"></script>
 	<script src="libs/jquery-touchswipe/jquery.touchSwipe.js"></script>
 	<script src="js/js.js"></script>
 	<!-- <script>svg4everybody();</script> -->

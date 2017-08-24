@@ -1053,6 +1053,14 @@ ul {
     .review__text {
       display: none; } }
 
+.review-popup {
+  position: relative;
+  display: none;
+  margin: 0 0.71429rem;
+  border-radius: 0.71429rem; }
+  .review-popup .review__title, .review-popup .review__text {
+    color: #000; }
+
 .delivery {
   background: url("../img/delivery/delivery-bg.jpg") center;
   background-size: cover; }

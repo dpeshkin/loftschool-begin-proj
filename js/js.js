@@ -142,17 +142,17 @@ $(function(){
     $('.wrapper').on("wheel", function (e) {
 
         var deltaY = e.originalEvent.deltaY,
-            direction = deltaY < 0 ? 'up' : 'down',
+            direction = deltaY > 0 ? 'up' : 'down',
             itemsList = $(".maincontent"),
             items = itemsList.find("section"),
             active = items.filter(".active"),
             nextItem, slideNum;
-
-        if (direction == "down"){
+       
+        if (direction == "up"){
             nextItem = active.next();
         }
 
-        if (direction == "up"){
+        if (direction == "down"){
             nextItem = active.prev();
         }
 
@@ -160,6 +160,32 @@ $(function(){
 
         if (flag == true) moveSlide (itemsList, slideNum, "vertical");
             
+    });
+
+
+    $('.wrapper').on("touchstart", function (e) {
+        
+        var itemsList = $(".maincontent"),
+            items = itemsList.find("section"),
+            active = items.filter(".active"),
+            nextItem, slideNum;
+
+        itemsList.swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                // ДАЛЕЕ ИДЕТ ЖЕСТЬ, НО НЕ ХВАТИЛО ВРЕМЕНИ ДОВЕСТИ ДО УМА
+                if (direction == "up" || direction == "down"){
+                    if (direction == "up"){
+                        nextItem = active.next();
+                        }
+                        if (direction == "down"){
+                            nextItem = active.prev();
+                        }
+                
+                        slideNum = nextItem.index();
+                        if (flag == true) moveSlide (itemsList, slideNum, "vertical");
+                };
+            }
+        });    
     });
 
     // SIDE-NAV
@@ -189,6 +215,12 @@ $(function(){
             moveSlide (itemsList, slideNum, "vertical");
         }
     })
+
+    $(".scroll").on('click', function(e){  
+        var itemsList = $(".maincontent"),
+            slideNum = 1;
+            moveSlide (itemsList, slideNum, "vertical");
+    })
     
     // TOP-NAV
     $('[data-scroll-to]').on('click', function (e) {
@@ -198,7 +230,8 @@ $(function(){
             slideNum = parseInt(elem.attr('data-scroll-to'));
 
         if (flag == true) moveSlide (itemsList, slideNum, "vertical");
-      });
+    });
+
 });
 
 

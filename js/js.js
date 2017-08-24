@@ -277,5 +277,9 @@ $(function(){
 // FANCYBOX
 
 $("[data-fancybox]").fancybox({
+    "smallBtn" : false
 });
-
+$(".popup-close").on("click touchstart", function(e) {
+    e.preventDefault();
+    $.fancybox.close();
+});

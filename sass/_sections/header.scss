@@ -84,6 +84,9 @@
 			&:after{
 				display: none;
 			}
+			@include tablets(){
+				margin-right: 0;
+			}
 		}
 
 		& a{

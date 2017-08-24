@@ -256,6 +256,9 @@ ul {
     margin-right: 0.85714rem; }
     .nav__item:last-child:after {
       display: none; }
+    @media screen and (max-width: 768px) {
+      .nav__item:last-child {
+        margin-right: 0; } }
   .nav__item a {
     text-decoration: none;
     text-transform: uppercase;
@@ -1060,6 +1063,15 @@ ul {
   border-radius: 0.71429rem; }
   .review-popup .review__title, .review-popup .review__text {
     color: #000; }
+  @media screen and (max-width: 480px) {
+    .review-popup .review__text {
+      display: inline; } }
+  .review-popup .popup-close {
+    display: block;
+    top: 1.42857rem;
+    right: 1.42857rem; }
+    .review-popup .popup-close:before, .review-popup .popup-close:after {
+      background: #ec8468; }
 
 .delivery {
   background: url("../img/delivery/delivery-bg.jpg") center;

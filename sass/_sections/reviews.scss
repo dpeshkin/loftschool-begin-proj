@@ -50,32 +50,32 @@
 }
 
 .review__title{
-		font-family: $headerfont;
-		font-size: rem(14px);
-		line-height: 2rem;
-		margin-bottom: rem(20px);
-		text-transform: uppercase;
-		
-		@include tablets(){
-			margin-bottom: rem(10px);
-		}
+	font-family: $headerfont;
+	font-size: rem(14px);
+	line-height: 2rem;
+	margin-bottom: rem(20px);
+	text-transform: uppercase;
+	
+	@include tablets(){
+		margin-bottom: rem(10px);
+	}
 
-		@include phones(){
-			font-size: rem(24px);
-			line-height: rem(28px);
-		}
+	@include phones(){
+		font-size: rem(24px);
+		line-height: rem(28px);
+	}
 
 }
 	
 .review__text{
-		font-weight: 300;
-		margin-bottom: rem(20px);
+	font-weight: 300;
+	margin-bottom: rem(20px);
 
-		@include phones(){
-			display: none;
-		}
-
+	@include phones(){
+		display: none;
 	}
+
+}
 
 .review-popup{
 	position: relative;
@@ -85,6 +85,25 @@
 	& .review__title, .review__text{
 		color: #000;
 	}
+
+	& .review__text{
+
+	
+		@include phones(){
+			display: inline;
+		}
+	
+	}
+
+	& .popup-close{
+		display: block;
+		top: rem(20px);
+		right: rem(20px);
+		&:before, &:after {
+			background: #ec8468;
+		}
+	}
+
 
 }
 
